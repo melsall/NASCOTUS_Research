@@ -1,4 +1,4 @@
-﻿justiceName,fullJusticeName,presAppointed,presAffiliation
+merged_dataset <- merge(NASCOTUS_CLEANED_dataset, justice_affiliations_dataset, by = "justiceName", all = TRUE)justiceName,fullJusticeName,presAppointed,presAffiliation
 WStrong,"Strong, William ( 03/14/1870 - 12/14/1880 )",Ulysses S. Grant,1
 JPBradley,"Bradley, Joseph ( 03/21/1870 - 01/22/1892 )",Ulysses S. Grant,1
 WHunt,"Hunt, Ward ( 01/09/1873 - 01/27/1882 )",Ulysses S. Grant,1
