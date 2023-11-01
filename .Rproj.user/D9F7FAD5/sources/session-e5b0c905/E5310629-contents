@@ -1,0 +1,79 @@
+merged_dataset <- merge(NASCOTUS_CLEANED_dataset, justice_affiliations_dataset, by = "justiceName", all = TRUE)justiceName,fullJusticeName,presAppointed,presAffiliation
+WStrong,"Strong, William ( 03/14/1870 - 12/14/1880 )",Ulysses S. Grant,1
+JPBradley,"Bradley, Joseph ( 03/21/1870 - 01/22/1892 )",Ulysses S. Grant,1
+WHunt,"Hunt, Ward ( 01/09/1873 - 01/27/1882 )",Ulysses S. Grant,1
+MRWaite,"Waite, Morrison ( 03/04/1874 - 04/03/1888 )",Ulysses S. Grant,1
+JHarlan1,"Harlan, John ( 12/10/1877 - 10/14/1911 )",Rutherford B. Hayes,1
+WBWoods,"Woods, William ( 01/05/1881 - 05/14/1887 )",Rutherford B. Hayes,1
+SMatthews,"Matthews, Stanley ( 05/17/1881 - 03/22/1889 )",Rutherford B. Hayes,1
+HGray,"Gray, Horace ( 01/09/1882 - 09/15/1902 )",Chester Arthur,1
+SBlatchford,"Blatchford, Samuel ( 04/03/1882 - 07/07/1893 )",Chester Arthur,1
+LQLamar,"Lamar, Lucius ( 01/18/1888 - 01/23/1893 )",Grover Cleveland,0
+MWFuller,"Fuller, Melville ( 10/08/1888 - 07/04/1910 )",Grover Cleveland,0
+DJBrewer,"Brewer, David ( 01/06/1890 - 03/28/1910 )",Benjamin Harrison,1
+HBBrown,"Brown, Henry ( 01/05/1891 - 05/28/1906 )",Benjamin Harrison,1
+GShiras,"Shiras, George ( 10/10/1892 - 02/23/1903 )",Benjamin Harrison,1
+HEJackson,"Jackson, Howell ( 03/04/1893 - 08/08/1895 )",Benjamin Harrison,1
+EDEWhite,"White, Edward ( 03/12/1894 - 05/19/1921 )",Grover Cleveland,0
+RWPeckham,"Peckham, Rufus ( 01/06/1896 - 10/24/1909 )",Grover Cleveland,0
+JMcKenna,"McKenna, Joseph ( 01/26/1898 - 01/05/1925 )",William McKinley,1
+OWHolmes,"Holmes, Oliver ( 08/11/1902 - 01/12/1932 )",Theodore Roosevelt,1
+WRDay,"Day, William ( 03/02/1903 - 11/13/1922 )",Theodore Roosevelt,1
+WHMoody,"Moody, William ( 12/17/1906 - 11/20/1910 )",Theodore Roosevelt,1
+HHLurton,"Lurton, Horace ( 01/03/1910 - 07/12/1914 )",Willam Taft,1
+CEHughes1,"Hughes, Charles ( 10/10/1910 - 06/10/1916 )",William Taft,1
+WVanDevanter,"Van Devanter, Willis ( 01/03/1911 - 06/02/1937 )",William Taft,1
+JRLamar,"Lamar, Joseph ( 01/03/1911 - 01/02/1916 )",William Taft,1
+MPitney,"Pitney, Mahlon ( 03/18/1912 - 12/31/1922 )",William Taft,1
+JCMcReynolds,"McReynolds, James ( 10/12/1914 - 01/31/1941 )",Woodrow Wilson,0
+LDBrandeis,"Brandeis, Louis ( 06/05/1916 - 02/13/1939 )",Woodrow Wilson,0
+JHClarke,"Clarke, John ( 10/09/1916 - 09/18/1922 )",Woodrow Wilson,0
+WHTaft,"Taft, William ( 07/11/1921 - 02/03/1930 )",Warren Harding,1
+GSutherland,"Sutherland, George ( 10/02/1922 - 01/17/1938 )",Warren Harding,1
+PButler,"Butler, Pierce ( 01/02/1923 - 11/16/1939 )",Warren Harding,1
+ETSanford,"Sanford, Edward ( 02/19/1923 - 03/08/1930 )",Warren Harding,1
+HFStone,"Stone, Harlan ( 03/02/1925 - 04/22/1946 )",Calvin Coolidge,1
+CEHughes2,"Hughes, Charles ( 02/24/1930 - 07/01/1941 )",Herbert Hoover,1
+OJRoberts,"Roberts, Owen ( 06/02/1930 - 07/31/1945 )",Herbert Hoover,1
+BNCardozo,"Cardozo, Benjamin ( 03/14/1932 - 07/09/1938 )",Herbert Hoover,1
+HLBlack,"Black, Hugo ( 08/19/1937 - 09/17/1971 )",Franklin Roosevelt,0
+SFReed,"Reed, Stanley ( 01/31/1938 - 02/25/1957 )",Franklin Roosevelt,0
+FFrankfurter,"Frankfurter, Felix ( 01/30/1939 - 08/28/1962 )",Franklin Roosevelt,0
+WODouglas,"Douglas, William ( 04/17/1939 - 11/12/1975 )",Franklin Roosevelt,0
+FMurphy,"Murphy, Francis ( 02/05/1940 - 07/19/1949 )",Franklin Roosevelt,0
+JFByrnes,"Byrnes, James ( 07/08/1941 - 10/03/1942 )",Franklin Roosevelt,0
+RHJackson,"Jackson, Robert ( 07/11/1941 - 10/09/1954 )",Franklin Roosevelt,0
+WBRutledge,"Rutledge, Wiley ( 02/15/1943 - 09/10/1949 )",Franklin Roosevelt,0
+HHBurton,"Burton, Harold ( 10/01/1945 - 10/13/1958 )",Harry Truman,0
+FMVinson,"Vinson, Fred ( 06/24/1946 - 09/08/1953 )",Harry Truman,0
+TCClark,"Clark, Tom ( 08/24/1949 - 06/12/1967 )",Harry Truman,0
+SMinton,"Minton, Sherman ( 10/12/1949 - 10/15/1956 )",Harry Truman,0
+EWarren,"Warren, Earl ( 10/05/1953 - 06/23/1969 )",Dwight Eisenhower,1
+JHarlan2,"Harlan, John ( 03/28/1955 - 09/23/1971 )",Dwight Eisnehower,1
+WJBrennan,"Brennan, William ( 10/16/1956 - 07/20/1990 )",Dwight Eisenhower,1
+CEWhittaker,"Whittaker, Charles ( 03/25/1957 - 03/31/1962 )",Dwight Eisenhower,1
+PStewart,"Stewart, Potter ( 10/14/1958 - 07/03/1981 )",Dwight Eisenhower,1
+BRWhite,"White, Byron ( 04/16/1962 - 06/28/1993 )",John Kennedy,0
+AJGoldberg,"Goldberg, Arthur ( 10/01/1962 - 07/25/1965 )",John Kennedy,0
+AFortas,"Fortas, Abe ( 10/04/1965 - 05/14/1969 )",Lyndon Johnson,0
+TMarshall,"Marshall, Thurgood ( 10/02/1967 - 10/01/1991 )",Lyndon Johnson,0
+WEBurger,"Burger, Warren ( 06/23/1969 - 09/26/1986 )",Richard Nixon,1
+HABlackmun,"Blackmun, Harry ( 06/09/1970 - 08/03/1994 )",Richard Nixon,1
+LFPowell,"Powell, Lewis ( 01/07/1972 - 06/26/1987 )",Richard Nixon,1
+WHRehnquist,"Rehnquist, William ( 01/07/1972 - 09/03/2005 )",Richard Nixon,1
+JPStevens,"Stevens, John ( 12/19/1975 - 06/29/2010 )",Gerald Ford,1
+SDOConnor,"O'Connor, Sandra ( 09/25/1981 - 01/31/2006 )",Ronald Reagan,1
+AScalia,"Scalia, Antonin ( 09/26/1986 - 02/13/2016 )",Ronald Reagan,1
+AMKennedy,"Kennedy, Anthony ( 02/18/1988 - 07/31/2018 )",Ronald Reagan,1
+DHSouter,"Souter, David ( 10/09/1990 - 06/29/2009 )",George H.W. Bush,1
+CThomas,"Thomas, Clarence ( 10/23/1991 - 00/00/0000 )",George H.W. Bush,1
+RBGinsburg,"Ginsburg, Ruth ( 08/10/1993 - 09/18/2020 )",Bill Clinton,0
+SGBreyer,"Breyer, Stephen ( 08/03/1994 - 06/30/2022 )",Bill Clinton,0
+JGRoberts,"Roberts, John ( 09/29/2005 - 00/00/0000 )",George W. Bush,1
+SAAlito,"Alito, Samuel ( 01/31/2006 - 00/00/0000 )",George W. Bush,1
+SSotomayor,"Sotomayor, Sonia ( 08/08/2009 - 00/00/0000 )",Barack Obama,0
+EKagan,"Kagan, Elena ( 08/07/2010 - 00/00/0000 )",Barack Obama,0
+NMGorsuch,"Gorsuch, Neil ( 04/08/2017 - 00/00/0000 )",Donald Trump,1
+BMKavanaugh,"Kavanaugh, Brett ( 10/06/2018 - 00/00/0000 )",Donald Trump,1
+ACBarrett,"Barrett, Amy ( 10/27/2020 - 00/00/0000 )",Donald Trump,1
+KBJackson,"Jackson, Ketanji ( 06/30/2022 - 00/00/0000 )",Joe Biden,0
