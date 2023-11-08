@@ -28,10 +28,12 @@ netdt1 <- select(dt, chief:caseSource)
 netdt2 <- select(dt, certReason:precedentAlteration)
 netdt3 <- select(dt, issue:lawSupp)
 
-cor1 <- cor_auto(netdt1)
-cor2 <- cor_auto(netdt2)
 
-cor.diff1 <- cor1-cor2
+cor1 <- cor_auto(netdt1, detectOrdinal = FALSE)
+
+cor2 <- cor_auto(netdt2, detectOrdinal = FALSE)
+
+#cor.diff1 <- cor1-cor2
 
 # qgraph(cor.diff1, vsize = 16, title = "Correlation Controls-PWADHD")
 # cor(netdt1, netdt2, method = c("pearson", "kendall", "spearman"))
