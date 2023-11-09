@@ -1,11 +1,4 @@
-#install necessary packages
-# install.packages("networktools")
-# install.packages("smacof")
-# install.packages("MPsychoR")
-# install.packages("psych")
-# install.packages("eigenmodel")
-# install.packages("dplyr")
-# install.packages("NetworkComparisonTest")
+#load libraries
 require("networktools")
 library("MPsychoR")
 library("smacof")
@@ -35,6 +28,8 @@ cor1 <- cor_auto(netdt1, detectOrdinal = FALSE)
 cor2 <- cor_auto(netdt2, detectOrdinal = FALSE)
 
 cor.diff1 <- cor1-cor2
+#print
+print(class(cor.diff1))
 # generating correlation graph of variables stored in corr.diff1
 qgraph(cor.diff1, vsize = 16, title = "Correlation Controls", labels = colnames(cor.diff1))
 
