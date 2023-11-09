@@ -1,4 +1,4 @@
-#script to make my ordinal values numeric
+# not currently using, to make my ordinal vals numeric
 
 #loading in
 ordinal_data <- read.csv("composite_dataset.csv", header = TRUE)
@@ -22,5 +22,5 @@ ordinal_column <- data_hold$lcDispositionDirection
 # Convert the ordinal column to numeric
 data_hold$lcDispositionDirection <- as.numeric(ordinal_column)
 
-# Save the updated data frame back to the CSV file, overwriting the original file
+# save back to composite_dataset.csv
 write.csv(data, "composite_dataset.csv", row.names = FALSE)

@@ -1,7 +1,5 @@
 # 1. GENERATING CORRELATION MATRIXES YAY
 
-# Now, 'data_frame' is an object containing the data from the CSV file
-
 # making subsets of predictor and outcome variables
 predictor_vars <- composite_dataset[, c("caseSource", "petitioner", "respondent")]
 outcome_vars <- data[, c("partyWinning", "decisionDirection", "issueArea")]
