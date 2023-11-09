@@ -1,3 +1,4 @@
+# Creates a model but does not consider predictors vs. outcomes
 #load libraries
 require("networktools")
 library("MPsychoR")
@@ -13,7 +14,6 @@ library("networktools")
 library("IsingSampler")
 library("IsingFit")
 library("bootnet")
-
 #read in data as a csv
 dt <- read.csv("composite_dataset.csv", header=TRUE)
 
@@ -31,7 +31,7 @@ cor.diff1 <- cor1-cor2
 #print
 print(cor.diff1)
 # generating correlation graph of variables stored in corr.diff1
-qgraph(cor.diff1, vsize = 16, title = "Correlation Controls", labels = colnames(cor.diff1))
+qgraph(cor.diff1, vsize = 16, title = "Correlation Graph", labels = colnames(cor.diff1))
 
 cor(netdt1, netdt2, method = c("pearson", "kendall", "spearman"))
 ##### 
