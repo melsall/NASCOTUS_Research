@@ -1,6 +1,8 @@
 # Purpose: creates graph with green/red, no relationjship among outcomes or among predictors
 # library yay
+
 library(qgraph)
+
 
 
 # separating predictors + outcomes, can change this if I need to to use different columns
