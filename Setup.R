@@ -8,6 +8,7 @@ install.packages("dplyr")
 install.packages("NetworkComparisonTest")
 install.packages("ggraph")
 install.packages("igraph")
+install.packages("viridisLite")
 
 # separating conservative and liberal data
 

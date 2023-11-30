@@ -14,7 +14,13 @@ cor_matrix <- cor(cbind(predictors, outcomes), use = "pairwise.complete.obs")
 
 # setting correlations that need to be set to 0 to 0 (among self, predictors --> predictors, etc.)
 cor_matrix[1:ncol(predictors), 1:ncol(predictors)] <- 0
-diag(cor_matrix) <- 0
+print(cor_matrix)
+total_rows = ncol(outcomes) + ncol(predictors)
+print(total_rows)
+cor_matrix[(total_rows - 2):total_rows, (total_rows -2) :total_rows] <- 0
+# cor_matrix[4:6, 4:6] <- 0
 
+diag(cor_matrix) <- 0
+print(cor_matrix)
 # using qgraph to make our network yay
 qgraph(cor_matrix, layout = "spring", weighted = TRUE, labels = colnames(cor_matrix))
