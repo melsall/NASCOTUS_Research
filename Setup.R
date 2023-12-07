@@ -9,7 +9,7 @@ install.packages("NetworkComparisonTest")
 install.packages("ggraph")
 install.packages("igraph")
 install.packages("viridisLite")
-
+install.packages("reshape2")
 # separating conservative and liberal data
 
 #LIBERAL presidents
