@@ -1,10 +1,10 @@
 # RankPvals
 
-# Get the indices of the sorted values
+# get those indices of sorted values
 sorted_indices <- order(p_vals_mat)
 
 # printing values in order + including what their row and column names are
-cat("\nValues in Order (Least to Greatest) with Row and Column Names:\n")
+cat("\nValues in Order (Least --> Greatest)\n")
 for (i in sorted_indices) {
   row_index <- floor((i - 1) / ncol(p_vals_mat)) + 1
   col_index <- (i - 1) %% ncol(p_vals_mat) + 1

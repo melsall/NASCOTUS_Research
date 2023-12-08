@@ -2,14 +2,13 @@
 
 #  YOU WANT THIS ONE PAL
 
-#Assuming conservative_correlations and liberal_correlations are your matrices
 
-# Create an empty matrix to store p-values
+# making empty matrix where I will store my P VALUES
 num_rows <- nrow(conservative_correlations)
 num_cols <- ncol(conservative_correlations)
 p_vals_mat <- matrix(NA, nrow = num_rows, ncol = num_cols)
 
-# Nested loops to iterate over each element in the matrices
+# nested loops, element over each element
 row_names <- rownames(liberal_data)
 col_names <- colnames(conservative_correlations)
 for (i in 1:num_rows) {
@@ -23,25 +22,25 @@ for (i in 1:num_rows) {
       stop("The correlation coefficients are not numeric.")
     }
     
-    # Fisher's z-transformation
+    # fisher's z-transformation 
     z_conservative <- 0.5 * log((1 + corr_conservative) / (1 - corr_conservative))
     z_liberal <- 0.5 * log((1 + corr_liberal) / (1 - corr_liberal))
     
-    # Sample size
+    # making sample size
     liberal_data_no_missing <- na.omit(liberal_data)
     num_rows_without_missing_values <- nrow(liberal_data_no_missing)
     sample_size <- num_rows_without_missing_values
     
-    # Calculate standard error of the difference
+    # "standard error of difference"
     se_diff <- sqrt(1 / (sample_size - 3) + 1 / (sample_size - 3))
     
-    # Calculate the test statistic for the difference
+    # tester statistic for the difference
     z_diff <- (z_liberal - z_conservative) / se_diff
     
-    # Determine statistical significance using a two-tailed test
+    # use 2 tailed test to determine statistical significance
     p_value <- 2 * (1 - pnorm(abs(z_diff)))
     
-    # Store the p-value in the matrix
+    # FINALLY. Put p-value in the matrix. 
     p_vals_mat[i, j] <- p_value
   }
 }
@@ -49,12 +48,12 @@ for (i in 1:num_rows) {
 
 
 
-# Add names to rows and columns
+# row + column names
 rownames(p_vals_mat) <- c("issueArea", "lawType", "lcDispositionDirection")
 colnames(p_vals_mat) <- c("direction", "precedentAlteration", "caseDisposition", "certReason")
 
 
 
 
-# Print the matrix of p-values
+# print out that matrix slay
 print(p_vals_mat)
