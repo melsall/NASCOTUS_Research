@@ -24,4 +24,6 @@ File Guide:
 
 **PartisanProperCorrelationMatrixes.R** - creates two correlation matrixes, one called liberal_correlations and one called conservative_correlations. Have correct # of rows and columns and have the correlation matrixes between each predictor --> each outcome. Vital for use in making statistical comparison.
         - these matrixes created are essential for statistical comparison
+
+**GeneratePValMatrix.R** - makes a matrix of all the p-values between the different variables (using the two different matrices conservative/liberal data to see)
         
