@@ -27,4 +27,4 @@ File Guide:
 
 **GeneratePValMatrix.R** - makes a matrix of all the p-values between the different variables (using the two different matrices conservative/liberal data to see)
 
-**RankPvalMatrix.R** - rank the val matrix, print out results. 
+**RankPvalMatrix.R** - rank the p_val_matrix from least to greatest and print out the results. 
