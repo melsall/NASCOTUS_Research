@@ -1,5 +1,5 @@
-# NASCOTUS_Research
-File Guide: 
+**NASCOTUS_Research:**
+**File Guide:**
 
 
 **Setup.R** --> necessary installations of packages, run once at beginning  
