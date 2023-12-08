@@ -20,4 +20,8 @@ File Guide:
 
 **justice_affiliations.csv** - Political affiliations of the presdient who appointed each justice. Combined with SCDB to make composite_dataset.   
 
-**Liberal_Generate.R** - generates a red/green network graph for the liberal_data dataset using standard correlation matrix. Still working on eliminating correlations predictor-->predictor and outcome-->outcome.
+**Liberal_Generate.R** - generates a red/green network graph for the liberal_data dataset using standard correlation matrix. Still working on eliminating correlations predictor-->predictor and outcome-->outcome. Issue: had to 0 values in this correlation matrix because it has all predictors as columns AND rows and same for outcomes.
+
+**PartisanProperCorrelationMatrixes.R** - creates two correlation matrixes, one called liberal_correlations and one called conservative_correlations. Have correct # of rows and columns and have the correlation matrixes between each predictor --> each outcome. Vital for use in making statistical comparison.
+        - these matrixes created are essential for statistical comparison
+        
