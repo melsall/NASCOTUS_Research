@@ -26,4 +26,5 @@ File Guide:
         - these matrixes created are essential for statistical comparison
 
 **GeneratePValMatrix.R** - makes a matrix of all the p-values between the different variables (using the two different matrices conservative/liberal data to see)
-        
+
+**RankPvalMatrix.R** - rank the val matrix, print out results. 
