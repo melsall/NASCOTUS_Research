@@ -24,7 +24,10 @@
 
 **PartisanProperCorrelationMatrixes.R** - creates two correlation matrixes, one called liberal_correlations and one called conservative_correlations. Have correct # of rows and columns and have the correlation matrixes between each predictor --> each outcome. Vital for use in making statistical comparison.
         - these matrixes created are essential for statistical comparison
+**chiSquaredBaby.R** - makes baby dataset, performs chi-squared on baby dataset to ensure it is doing what I think it is doing. 
 
 **GeneratePValMatrix.R** - makes a matrix of all the p-values between the different variables (using the two different matrices conservative/liberal data to see)
 
 **RankPvalMatrix.R** - rank the p_val_matrix from least to greatest and print out the results. 
+
+**UpheldAsPercentages.R** - printing percentages of times liberals/conservatives upheld
