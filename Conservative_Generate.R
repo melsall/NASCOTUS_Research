@@ -17,5 +17,6 @@ cor_matrix[1:ncol(predictors), 1:ncol(predictors)] <- 0
 cor_matrix[1:ncol(outcomes), 1:ncol(outcomes)] <- 0
 diag(cor_matrix) <- 0
 
+print(cor_matrix)
 # using qgraph to make our network yay
 qgraph(cor_matrix, layout = "spring", weighted = TRUE, labels = colnames(cor_matrix), title = "Conservative Justices Correlations")
