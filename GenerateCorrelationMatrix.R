@@ -1,8 +1,8 @@
 # 1. GENERATING CORRELATION MATRIXES YAY
 
 # making subsets of predictor and outcome variables
-predictor_vars <- composite_dataset[, c("caseSource", "petitioner", "respondent")]
-outcome_vars <- composite_dataset[, c("partyWinning", "decisionDirection", "issueArea")]
+predictor_vars <- composite_dataset[, c("caseSource", "petitioner", "issueArea")]
+outcome_vars <- composite_dataset[, c("partyWinning", "decisionDirection", "direction")]
 
 # initializing a matrix to store correlations & using NA to deal with those missign vals
 cor_matrix <- matrix(NA, nrow = ncol(predictor_vars), ncol = ncol(outcome_vars))
