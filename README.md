@@ -32,3 +32,8 @@
 **RankPvalMatrix.R** - rank the p_val_matrix from least to greatest and print out the results. 
 
 **UpheldAsPercentages.R** - printing percentages of times liberals/conservatives upheld
+
+**Partisan_Heatmap.R** - computes partial correlation and creates heatmap for parties individually
+
+**THROWAWAY FOLDER** 
+**PartisanCorrelationMatrices** - in theory this file generate correlation matrices for the subsets of partisan data but it doesn't actually work
