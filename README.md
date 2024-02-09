@@ -33,6 +33,8 @@
 
 **UpheldAsPercentages.R** - printing percentages of times liberals/conservatives upheld
 
+**proofChiSquaredWorks.R** - proves that my chiSquared test works when put against actual calculator.
+
 **Partisan_Heatmap.R** - computes partial correlation and creates heatmap for parties individually
 
 **THROWAWAY FOLDER** 
