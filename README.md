@@ -37,5 +37,7 @@
 
 **Partisan_Heatmap.R** - computes partial correlation and creates heatmap for parties individually
 
+**OrganizingPcorData.R** - using the file Partisan_Heatmaps.R to make correlation matrixes that show the pcor correlations of a subset of predictor variables & outcome variables.
+
 **THROWAWAY FOLDER** 
 **PartisanCorrelationMatrices** - in theory this file generate correlation matrices for the subsets of partisan data but it doesn't actually work
