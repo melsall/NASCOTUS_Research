@@ -11,11 +11,12 @@ if (any(is.na(tiny))) {
   tiny <- na.omit(tiny)  # removeeeee
 }
 # make a matrix called results that has these values
-results <- pcor(tiny, method = c("pearson", "kendall", "spearman"))
+results_con <- pcor(tiny, method = c("pearson", "kendall", "spearman"))
+
 
 #heatmapping
 # putting partial correlation in "results" 
-heatmap(results$estimate, 
+heatmap(results_con$estimate, 
         Rowv = NA, Colv = NA,  # Turn off row and column clustering
         xlab = "Variables", ylab = "Variables",
         main = "Conservative Justices Only Heatmap")
@@ -23,10 +24,10 @@ heatmap(results$estimate,
 library(ggplot2)
 
 # make the matrix a df so that ggplot can work with it
-results_df <- as.data.frame(results$estimate)
+results_df_con <- as.data.frame(results_con$estimate)
 
 # heatmap generation slay
-ggplot(data = results_df, aes(x = Var1, y = Var2, fill = value)) +
+ggplot(data = results_df_con, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile() +
   scale_fill_gradient(low = "white", high = "blue") +
   labs(title = "Conservative Justices Only Heatmap",
@@ -45,11 +46,11 @@ if (any(is.na(tiny))) {
   tiny <- na.omit(tiny)  # removeeeee
 }
 # make a matrix called results that has these values
-results <- pcor(tiny, method = c("pearson", "kendall", "spearman"))
+results_lib <- pcor(tiny, method = c("pearson", "kendall", "spearman"))
 
 #heatmapping
 # putting partial correlation in "results" 
-heatmap(results$estimate, 
+heatmap(results_lib$estimate, 
         Rowv = NA, Colv = NA,  
         xlab = "Variables", ylab = "Variables",
         main = "Liberal Heatmap")
@@ -57,11 +58,14 @@ heatmap(results$estimate,
 library(ggplot2)
 
 # make the matrix a df so that ggplot can work with it
-results_df <- as.data.frame(results$estimate)
+results_df_lib <- as.data.frame(results_lib$estimate)
 
 # heatmap generation slay
-ggplot(data = results_df, aes(x = Var1, y = Var2, fill = value)) +
+ggplot(data = results_df_lib, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile() +
   scale_fill_gradient(low = "white", high = "blue") +
   labs(title = "Liberal Heatmap",
        x = "Variables", y = "Variables")
+
+value = results_df_con[1,4]
+print(value)

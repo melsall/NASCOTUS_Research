@@ -114,3 +114,7 @@ ggplot(data = melt(lib_ordered_matrix), aes(x = Var2, y = Var1, fill = value)) +
   scale_fill_gradient(low = "white", high = "black", na.value = "white") +
   labs(title = "Conservative Justices Only Heatmap",
        x = "Outcomes", y = "Predictors")
+
+
+print(lib_cor_matrix)
+print(cons_cor_matrix)
