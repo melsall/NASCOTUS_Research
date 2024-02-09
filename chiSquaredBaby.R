@@ -43,3 +43,15 @@ chisq_test_result <- chisq.test(baby_data[, 2:ncol(baby_data)])
 # printing result
 print(chisq_test_result) # should be 0, is 0
 
+
+
+# making a chisq row with my contributions.
+contributions <- chisq_test_result$observed - chisq_test_result$expected
+
+# adding a total columnin contributions
+total_contributions <- cbind(contributions, Total = rowSums(contributions))
+
+# result printing.
+print(total_contributions)
+print(chisq_test_result)
+
