@@ -39,7 +39,10 @@
 
 **OrganizingPcorData.R** - using the file Partisan_Heatmaps.R to make correlation matrixes that show the pcor correlations of a subset of predictor variables & outcome variables.
 
-**GeneralLogisticRegression.R** - supposed to be a general logistic regression for my small dataset
+**GeneralLogisticRegression.R** - is a general logistic regression for my whole dataset
+
+**Partisan Regression** - logistic regression for parties separately so that I can compare the factors that are more important for each party
+
 **THROWAWAY FOLDER** 
 **PartisanCorrelationMatrices** - in theory this file generate correlation matrices for the subsets of partisan data but it doesn't actually work
 
