@@ -10,8 +10,13 @@ install.packages("ggraph")
 install.packages("igraph")
 install.packages("viridisLite")
 install.packages("reshape2")
-# separating conservative and liberal data
+install.packages("caret")
+install.packages("randomForest")
 
+# separating conservative and liberal data
+library("caret")
+library("MASS")
+library("dplyr")
 #LIBERAL presidents
 liberal_data <- composite_dataset[composite_dataset$presAffiliation == 0, ]
 
