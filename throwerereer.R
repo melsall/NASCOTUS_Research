@@ -1,0 +1,1 @@
+print(colSums(data_for_regression == 0 ))

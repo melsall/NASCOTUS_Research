@@ -32,7 +32,7 @@ result <- rfe(as.data.frame(X), as.factor(y), sizes=c(1:ncol(X)), rfeControl=ctr
 
 # printing the selected variables yay
 print("Liberal Results ")
-print(result$optVariables)
+print(result)
 
 # Now doing exact same thing as above for conservative presidents
 uncleaned_data_for_regression <- conservative_data[, c('issueArea', 'lawType', 'lcDispositionDirection', 'certReason', 'decisionDirection')]
@@ -64,4 +64,4 @@ result <- rfe(as.data.frame(X), as.factor(y), sizes=c(1:ncol(X)), rfeControl=ctr
 
 # printing the selected variables yay
 print("Conservative Results ")
-print(result$optVariables)
+print(result)
