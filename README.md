@@ -41,6 +41,8 @@
 
 **GeneralLogisticRegression.R** - is a general logistic regression for my whole dataset
 
+**cleaningOutcomeVariableColumn.R** - making it so the outcome variable column is actually the outcome. Used Majority column as a help to make this happen.
+
 **Partisan Regression** - logistic regression for parties separately so that I can compare the factors that are more important for each party
 
 **THROWAWAY FOLDER** 
