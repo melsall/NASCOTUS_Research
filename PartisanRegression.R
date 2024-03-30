@@ -2,7 +2,7 @@
 # doing a logistic regression on the entire dataset to tell what features are the most important
 
 # dataset that is just the features that I want
-
+library(dplyr)
 uncleaned_data_for_regression <- liberal_data[, c('issueArea', 'lawType', 'lcDispositionDirection', 'certReason', 'decisionDirection')]
 
 # removing where direction is unspecifiable

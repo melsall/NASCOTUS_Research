@@ -37,3 +37,5 @@ cleaned_composite_dataset$justicesDecision[
 cleaned_composite_dataset$justicesDecision[
   with(cleaned_composite_dataset, majority == 2 & caseDisposition == 1)
 ] <- 1
+
+
