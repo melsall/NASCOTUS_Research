@@ -64,4 +64,4 @@ result <- rfe(as.data.frame(X), as.factor(y), sizes=c(1:ncol(X)), rfeControl=ctr
 
 # printing the selected variables yay
 print("Conservative Results ")
-print(result)
+print(summary(model))

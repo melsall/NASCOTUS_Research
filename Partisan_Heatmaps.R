@@ -13,7 +13,7 @@ if (any(is.na(tiny))) {
 # make a matrix called results that has these values
 results_con <- pcor(tiny, method = c("pearson", "kendall", "spearman"))
 
-
+print(results_con)
 #heatmapping
 # putting partial correlation in "results" 
 heatmap(results_con$estimate, 
@@ -47,6 +47,7 @@ if (any(is.na(tiny))) {
 }
 # make a matrix called results that has these values
 results_lib <- pcor(tiny, method = c("pearson", "kendall", "spearman"))
+
 
 #heatmapping
 # putting partial correlation in "results" 

@@ -3,10 +3,12 @@ library(caret)
 
 # CONSERVATIVE FIRST.
 
-# dataset that is just the features that I want
+# dataset that is just the features that I want (0 is liberal)
 conservative_data_for_regression <- cleaned_composite_dataset[cleaned_composite_dataset$presAffiliation == 1, ]
 
-conservative_data_for_regression<- cleaned_composite_dataset[, c('lawType', 'lcDispositionDirection', 'certReason', 'justicesDecision')]
+
+
+conservative_data_for_regression<- conservative_data_for_regression[, c('lawType', 'lcDispositionDirection', 'certReason', 'justicesDecision')]
 
 # Stop code that is not working.
 

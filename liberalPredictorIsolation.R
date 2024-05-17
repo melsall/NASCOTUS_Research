@@ -5,9 +5,9 @@ library(caret)
 
 # dataset that is just the features that I want
 liberal_data_for_regression <- cleaned_composite_dataset[cleaned_composite_dataset$presAffiliation == 0, ]
-
-liberal_data_for_regression<- cleaned_composite_dataset[, c('lawType', 'lcDispositionDirection', 'certReason', 'justicesDecision')]
-
+liberal_data_for_regression <- liberal_data_for_regression[liberal_data_for_regression$lcDispositionDirection!= 3, ]
+liberal_data_for_regression <- liberal_data_for_regression[, c('lawType', 'issueArea', 'lcDispositionDirection', 'certReason', 'justicesDecision')]
+print(table(liberal_data_for_regression$issueArea))
 # Stop code that is not working.
 
 # take care of missing values
@@ -20,11 +20,12 @@ y <- as.factor(liberal_data_for_regression$justicesDecision) # making it a facto
 # Creating logistic regression model
 
 liberal_data_for_regression$lawType <- as.factor((liberal_data_for_regression$lawType))
-#liberal_data_for_regression$issueArea <- as.factor((liberal_data_for_regression$issueArea))
+liberal_data_for_regression$issueArea <- as.factor((liberal_data_for_regression$issueArea))
 liberal_data_for_regression$lcDispositionDirection <- as.factor((liberal_data_for_regression$lcDispositionDirection))
 liberal_data_for_regression$certReason <- as.factor((liberal_data_for_regression$certReason))
 #liberal_data_for_regression$presAffiliation <- as.factor((liberal_data_for_regression$presAffiliation))
 
 # THIS IS THE LINE YOU COULD ALTER
-model <- glm(justicesDecision ~ lcDispositionDirection- justicesDecision, data = liberal_data_for_regression, family = binomial(link = "logit"))
+model <- glm(justicesDecision ~ lcDispositionDirection + issueArea, data = liberal_data_for_regression, family = binomial(link = "logit"))
 print(summary(model))
+

@@ -2,14 +2,20 @@
 library("ppcor")
 
 # make a dataframe with only very niche columns called tiny
-tiny <- data.frame(issueArea = composite_dataset$issueArea, lawType = composite_dataset$lawType, lcDispositionDirection = composite_dataset$lcDispositionDirection, direction = composite_dataset$direction, precedentAlteration = composite_dataset$precedentAlteration, caseDisposition = composite_dataset$caseDisposition, certReason = composite_dataset$certReason)
+# tiny <- data.frame(issueArea = composite_dataset$issueArea, lawType = composite_dataset$lawType, lcDispositionDirection = composite_dataset$lcDispositionDirection, direction = composite_dataset$direction, precedentAlteration = composite_dataset$precedentAlteration, caseDisposition = composite_dataset$caseDisposition, certReason = composite_dataset$certReason)
 
+tiny <- data.frame(lcDispositionDirection = data_for_regression$lcDispositionDirection, justicesDecision = data_for_regression$justicesDecision, presAffiliation = data_for_regression$presAffiliation)
 # rid urslef of missing data
 if (any(is.na(tiny))) {
   tiny <- na.omit(tiny)  # removeeeee
 }
-# make a matrix called results that has these values
-results <- pcor(tiny, method = c("pearson", "kendall", "spearman"))
+
+
+
+encoded_data <- model.matrix(~ lcDispositionDirection + presAffiliation + justicesDecision, data = tiny)
+
+# Compute partial correlations
+results <- pcor(encoded_data, method = c("pearson", "kendall", "spearman"))
 
 #heatmapping
 # putting partial correlation in "results" 
@@ -29,3 +35,4 @@ ggplot(data = results_df, aes(x = Var1, y = Var2, fill = value)) +
   scale_fill_gradient(low = "white", high = "blue") +
   labs(title = "Partial Correlation Heatmap",
        x = "Variables", y = "Variables")
+

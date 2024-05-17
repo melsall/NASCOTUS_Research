@@ -34,19 +34,10 @@ print(chi_square_test_result)
 # accessing the p_value
 p_value <- chi_square_test_result$p.value
 
-# Print the p-value
+# Print the p-vaslue
 # 
 print("new p value")
 print(p_value)
 
 
-# spliting conservative data into upheld/not upheld a case
-conservative_upheld <- conservative_data[conservative_data$partyWinning == 0, ]
-conservative_overturned <- conservative_data[conservative_data$partyWinning == 1, ]
 
-
-# printing amount of rows in each case of uphelds, commenting out for now because it is annoying
-# num_rows <- nrow(liberal_upheld)
-# print(num_rows)
-# num_rows2 <- nrow(conservative_upheld)
-# print(num_rows2)
